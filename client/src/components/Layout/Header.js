@@ -19,23 +19,6 @@ const Header = () => {
   };
   return (
     <>
-      {/* <nav className="navbar navbar-expand-lg header">
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <Link className="navbar-brand" to="/">
-            <h3>SpendSensibly</h3>
-          </Link>
-        </div>
-        <div className="hed1">
-          <div><h6 className=" ">
-            {loginUser && loginUser.name}
-          </h6></div>
-          <div><button className="btn btn-danger" onClick={logoutHandler}>
-            Logout
-          </button></div>
-          
-          
-        </div>
-      </nav> */}
       <nav className="navbar navbar-expand-lg header">
           <div className=" navbar-collapse">
           <Link className="navbar-brand" to="/">

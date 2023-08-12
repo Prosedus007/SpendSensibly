@@ -1,22 +1,22 @@
-import React, {useEffect} from "react";
+import React, {useEffect,useState} from "react";
 import { Form, Input, message,Button } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner";
 const Register = () => {
   const navigate = useNavigate();
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   //from submit
   const submitHandler = async (values) => {
     try {
-      // setLoading(true);
+      setLoading(true);
       await axios.post("/users/register", values);
       message.success("Registeration Successfull");
-      // setLoading(false);
+      setLoading(false);
       navigate("/login");
     } catch (error) {
-      // setLoading(false);
-      message.error("something went wrong");
+      setLoading(false);
+      message.error("Enter all the field");
     }
   };
 
@@ -50,6 +50,7 @@ const Register = () => {
             </Form.Item>
 
             <Button type="primary" htmlType="submit" block >
+            {loading && (<Spinner />)}
               Register
             </Button>
 

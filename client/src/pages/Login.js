@@ -1,17 +1,19 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import { Form, Input, message , Button} from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-// import spinner from '../component/Spinner/spinner' 
+import Spinner from "../components/Spinner";
+
+
 const Login = () => {
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   //from submit
   const submitHandler = async (values) => {
     try {
-      // setLoading(true);
+      setLoading(true);
       const { data } = await axios.post("/users/login", values);
-      // setLoading(false);
+      setLoading(false);
       message.success("login success");
       localStorage.setItem(
         "user",
@@ -19,12 +21,12 @@ const Login = () => {
       );
       navigate("/");
     } catch (error) {
-      // setLoading(false);
-      message.error("something went wrong");
+      setLoading(false);
+      message.error("Invalid user or Password");
     }
   };
 
-  // prevent for login user  , { useState, useEffect }
+  // prevent for login user  
   useEffect(() => {
     if (localStorage.getItem("user")) {
       navigate("/");
@@ -33,6 +35,7 @@ const Login = () => {
   return (
 
     <div className="login-page">
+      
       <div className='log-div'>
           <h1>SpendSensibly</h1>
           <span>
@@ -53,7 +56,8 @@ const Login = () => {
             </Form.Item>
 
             <Button type="primary" htmlType="submit" block >
-              Login
+            {loading && (<Spinner />)}
+              <span>Login</span>
             </Button>
               <span>
                 Don't have an account? <Link to="/register">Register</Link>
