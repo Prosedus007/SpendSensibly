@@ -46,7 +46,37 @@ const Analytics = ({ allTransection }) => {
     (totalExpenseTurnover / totalTurnover) * 100;
   return (
     <>
+      
       <div className="row m-3">
+      {/* <div className="col-md-2">
+          <div className="card">
+            <div className="card-header">
+              Total Balance : {totalIncomeTurnover - totalExpenseTurnover}
+            </div>
+            <div className="card-body">
+              <h5 className="text-success">
+                Income : {totalIncomeTurnover.length}
+              </h5>
+              <h5 className="text-danger">
+                Expense : {totalExpenseTurnover.length}
+              </h5>
+              <div className="d-flex flex-column align-items-center">
+                <Progress
+                  type="circle"
+                  strokeColor={"green"}
+                  className="mx-2"
+                  percent={(((totalIncomeTurnover - totalExpenseTurnover)/totalIncomeTurnover)*100).toFixed(0)}
+                />
+                <Progress
+                  type="circle"
+                  strokeColor={"red"}
+                  className="mx-2 mt-3"
+                  percent={100-(((totalIncomeTurnover - totalExpenseTurnover)/totalIncomeTurnover)*100).toFixed(0)}
+                />
+              </div>
+            </div>
+          </div>
+        </div> */}
         <div className="col-md-3">
           <div className="card">
             <div className="card-header">
