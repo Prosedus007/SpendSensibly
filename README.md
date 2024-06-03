@@ -16,12 +16,12 @@ Spend Sensibly is an expense tracking and budgeting application designed to help
 - Allocate portions of monthly income to expense categories.
 - Receive visualizations and notifications to stay within budgeted amounts.
 
-### Reports and Analytics
+### Statistics
 
-- Generate summaries of spending by category.
+- Generate Statistics of spending by category.
 - Analyze spending trends over time.
 - Compare actual spending to budgeted amounts.
-- Receive suggestions for areas to cut back on spending.
+
 
 ## Setup Instructions
 
