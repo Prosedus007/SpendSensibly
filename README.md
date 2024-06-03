@@ -36,16 +36,16 @@ Copy code
 
 2. Navigate to the project directory:
 
-cd spend-sensibly
+cd spendsensibly
 
 markdown
 Copy code
 
 3. Install dependencies for both the frontend and backend:
 
-cd client
-npm install
-cd ../server
+cd client <br />
+npm install <br />
+
 npm install
 
 markdown
@@ -63,7 +63,7 @@ Copy code
 
 5. Start the backend server:
 
-cd server
+
 npm start
 
 markdown
@@ -71,7 +71,7 @@ Copy code
 
 6. Start the frontend development server:
 
-cd client
+cd client <br />
 npm start
 
 less
@@ -88,17 +88,15 @@ Copy code
 
 ## Screenshots
 
-![Screenshot 1](https://via.placeholder.com/600x400.png)
-*Screenshot 1: Example of Expense Tracking*
+![Screenshot 1](Images/register.png)
 
-![Screenshot 2](https://via.placeholder.com/600x400.png)
-*Screenshot 2: Example of Budgeting*
 
-## Contributors
+![Screenshot 2](Images/login.png)
+![Screenshot 3](Images/list.png)
+![Screenshot 4](Images/stats.png)
+![Screenshot 5](Images/add.png)
+![Screenshot 6](Images/edit.png)
 
-- John Doe (@john-doe)
-- Jane Smith (@jane-smith)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
